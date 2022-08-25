@@ -1,36 +1,33 @@
-function getCharacters(done)
+function getCharacters(done) 
 {
-    
+
     const results = fetch("https://rickandmortyapi.com/api/character");
 
     results
-        .then(response => response.json())
-        .then(data =>
-                {
-                    done(data)
-                });
+        .then((response) => response.json())
+        .then((data) => 
+        {
+            done(data);
+        });
 
 }
 
-getCharacters(data =>
+getCharacters((data) => 
+{
+    data.results.forEach((personaje) => 
     {
-        data.results.forEach(personaje => {
-            
-            const article = document.createRange().createContextualFragment
-            (
-            `<article>
+    const article = document.createRange().createContextualFragment
+        (`<article>
                 <div class="image-container">
                     <img src="${personaje.image}" 
-                         alt="Imagen de ${personaje.name}">
+                        alt="Imagen de ${personaje.name}">
                 </div>
                 <h2>${personaje.name}</h2>
                 <span>${personaje.status}</span>
-            </article>`
-            );
+        </article>`);
 
-            const main = document.querySelector("main");
+    const main = document.querySelector("main");
 
-            main.append(article);
-
-        });
-    })
+    main.append(article);
+    });
+});
