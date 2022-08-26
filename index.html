@@ -1,17 +1,43 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
-    <title>Andoti</title>
-</head>
-<body>
-        <h1>Exercise learned on YouTube with Platzi</h1>
-        <br>
-        <main></main>
+    <title>Centrando un div</title>
+    <style>
+        body {
+            margin: 0;
+        }
 
-        <script src="./index.js"></script>
+        .container {
+            background-image: linear-gradient(to right, black, rgb(13, 13, 80), black);
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .item {
+            color: white;
+            width: 50vw;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="item">
+            <h1>ANDOTI</h1>
+        </div>
+        <div class="item">
+            <img src="./imageen.svg" alt="Coming soon by Lesther XM" title="Coming soon by LestherXM">
+        </div>
+    </div>
 </body>
+
 </html>
